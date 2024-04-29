@@ -13,6 +13,11 @@ const TaskSchema = new mongoose.Schema({
         type: String, 
         default: 'https://cdn-icons-png.flaticon.com/512/747/747095.png'
     },
+    task_status: {
+        type: String,
+        enum: ['Pending', 'Completed'],
+        default: 'Pending'
+    },
     task_dueDate:{
         type: Date, 
         require: true
