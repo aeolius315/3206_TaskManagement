@@ -105,26 +105,6 @@ router.put("/editTasks/:taskID", async (req, res) => {
     }
 });
 
-router.delete("/deleteFav/:userID/:taskID", async (req, res) => {
-    const taskID = req.params.taskID;
-    const userID = req.params.userID;
-    try {
-        const response = await UserModel.updateOne(
-            {_id: userID},
-            {$pull: { savedTasks: taskID}}
-        )
-
-        if(response){
-            res.json({taskID, userID, response, message: "Successfully removed from favorites"});
-        } else{
-            res.json({message: "Something went wrong! Contact Administrator"})
-        }
-        
-    } catch (error) {
-        console.log(error);
-    }
-})
-
 router.delete("/delete/addedTask/:taskID", async (req, res) => {
     const taskID = req.params.taskID;
     try {
@@ -135,7 +115,7 @@ router.delete("/delete/addedTask/:taskID", async (req, res) => {
         )
 
         if(response1 && response2){
-            res.json({status:1, message: "Successfully removed from Main List"});
+            res.json({status:1, message: "Successfully removed from Task List"});
         } else{
             res.json({status: 0, message: "Something went wrong! Contact Administrator"})
         }
