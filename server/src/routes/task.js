@@ -33,7 +33,7 @@ router.get("/addedTasks/:userID", async (req,res) => {
     const userID = req.params.userID;
     try {
         // res.json(userID);
-        const response = await TaskModel.find({task_addedUser: userID});
+        const response = await TaskModel.find({task_addedUser: userID}).sort({ task_dueDate: 1 });
         res.json(response);
 
     } catch (error) {
