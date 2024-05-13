@@ -18,7 +18,6 @@ export const CreateTask = () => {
         const {name, value} = event.target;
         setTask({...task, [name]: value});
     }
-    // console.log(task);
 
     const onSubmit = async (event) => {
         event.preventDefault();
