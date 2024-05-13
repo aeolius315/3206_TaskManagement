@@ -1,8 +1,10 @@
 ﻿# 3206_TaskManagement
 
-## How to Use:
-- Clone or download repo.
-- Open Terminal or Git and run these commands:
+Final Project for IT 3206 - Integrative Programming and Technology. It includes Basic CRUD Functionality for a Simple Task Management App. It utilizes MERN Stack.
+
+## How To Use
+- Clone or Download Repository.
+- Open Terminal or Git and Run these commands:
 ```
 cd client
 npm install
