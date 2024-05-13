@@ -1,9 +1,6 @@
 import express from "express";
-import mongoose from "mongoose";
-import jwt from 'jsonwebtoken';
 import { TaskModel } from "../models/Tasks.js";
 import { UserModel } from "../models/Users.js";
-import { verifyToken } from "./users.js";
 
 const router = express.Router();
 
@@ -32,7 +29,6 @@ router.get("/getSpecTask/:taskID", async (req,res) => {
 router.get("/addedTasks/:userID", async (req,res) => {
     const userID = req.params.userID;
     try {
-        // res.json(userID);
         const response = await TaskModel.find({task_addedUser: userID}).sort({ task_dueDate: 1 });
         res.json(response);
 
@@ -70,20 +66,6 @@ router.post("/", async (req, res) => {
     try {
         const response = await task.save();
         res.json({message: "Task Successfully Added in the List", response});
-    } catch (error) {
-        console.log(error);
-    }
-});
-
-router.put("/", verifyToken, async (req,res) => {
-    try {
-        const task =  await TaskModel.findById(req.body.taskID);
-        const user = await UserModel.findById(req.body.userID);
-
-        user.savedTasks.push(task);
-        await user.save();
-
-        res.json({savedTasks: user.savedTasks});
     } catch (error) {
         console.log(error);
     }

@@ -9,7 +9,7 @@ const TaskSchema = new mongoose.Schema({
         type: String, 
         require: true
     },
-    tast_img_url:{
+    task_img_url:{
         type: String, 
         default: 'https://cdn-icons-png.flaticon.com/512/747/747095.png'
     },
