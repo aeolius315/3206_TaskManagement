@@ -18,3 +18,7 @@ npm start
 
 > [!IMPORTANT]
 > Two terminals needs to be running simultaneously (both client and server) to run the web app.
+
+## API Documentation
+
+https://documenter.getpostman.com/view/34801551/2sA3JQ3yqS
