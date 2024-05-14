@@ -1,6 +1,6 @@
-import express from "express";
+import express from 'express';
 import cors from 'cors';
-import bodyParser from "body-parser";
+import bodyParser from 'body-parser';
 import mongoose from 'mongoose';
 
 import { userRouter } from './routes/users.js';

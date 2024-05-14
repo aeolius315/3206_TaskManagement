@@ -1,7 +1,7 @@
-import axios from "axios";
-import { useEffect, useState } from "react";
+import axios from 'axios';
+import { useEffect, useState } from 'react';
 import { useGetUserID } from '../hooks/getUserId';
-import { UpdateModal } from "../components/updateModal";
+import { UpdateModal } from '../components/updateModal';
 
 export const AddedTasks = () => {
     const imgDimes = {

@@ -1,4 +1,4 @@
-import mongoose from "mongoose";
+import mongoose from 'mongoose';
 
 const TaskSchema = new mongoose.Schema({
     task_name: {

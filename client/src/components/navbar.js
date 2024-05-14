@@ -1,6 +1,6 @@
-import { Link } from "react-router-dom";
-import { useCookies } from "react-cookie";
-import { useNavigate } from "react-router-dom";
+import { Link } from 'react-router-dom';
+import { useCookies } from 'react-cookie';
+import { useNavigate } from 'react-router-dom';
 
 export const Navbar = () => {
     const [cookies, setCookies] = useCookies(["access_token"]);

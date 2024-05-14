@@ -1,8 +1,8 @@
-import { useState } from "react";
-import { useCookies } from "react-cookie";
+import { useState } from 'react';
+import { useCookies } from 'react-cookie';
 import axios from 'axios';
 import Form  from '../components/authForm.js'
-import { useNavigate } from "react-router-dom"; 
+import { useNavigate } from 'react-router-dom'; 
 
 export const Login = () => {
     return <LoginDiv />
