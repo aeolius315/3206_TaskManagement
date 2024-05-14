@@ -3,7 +3,7 @@ import mongoose from "mongoose";
 const TaskSchema = new mongoose.Schema({
     task_name: {
         type: String,
-        required: true,
+        required: true
     },
     task_description:{
         type: String, 

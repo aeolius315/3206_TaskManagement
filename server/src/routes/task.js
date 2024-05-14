@@ -4,15 +4,15 @@ import { UserModel } from "../models/Users.js";
 
 const router = express.Router();
 
-router.get("/", async (req,res) => {
-    try {
-        const response = await TaskModel.find({});
-        res.json(response);
+// router.get("/", async (req,res) => {
+//     try {
+//         const response = await TaskModel.find({});
+//         res.json(response);
 
-    } catch (error) {
-        console.log(error);
-    }
-});
+//     } catch (error) {
+//         console.log(error);
+//     }
+// });
 
 router.get("/getSpecTask/:taskID", async (req,res) => {
     const taskID = req.params.taskID;
@@ -26,6 +26,7 @@ router.get("/getSpecTask/:taskID", async (req,res) => {
     }
 });
 
+// VIEW ALL ADDED TASK BY A SPECIFIC USER
 router.get("/addedTasks/:userID", async (req,res) => {
     const userID = req.params.userID;
     try {
@@ -61,6 +62,7 @@ router.get("/savedTasks/:userID", async (req, res) => {
     }
 })
 
+// ADD A TASK
 router.post("/", async (req, res) => {
     const task = new TaskModel(req.body);
     try {
@@ -71,6 +73,7 @@ router.post("/", async (req, res) => {
     }
 });
 
+// UPDATE A TASK
 router.put("/editTasks/:taskID", async (req, res) => {
     const taskID = req.params.taskID;
 
@@ -87,6 +90,7 @@ router.put("/editTasks/:taskID", async (req, res) => {
     }
 });
 
+// DELETE A TASK
 router.delete("/delete/addedTask/:taskID", async (req, res) => {
     const taskID = req.params.taskID;
     try {
