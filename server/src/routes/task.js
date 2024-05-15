@@ -4,16 +4,6 @@ import { UserModel } from '../models/Users.js';
 
 const router = express.Router();
 
-// router.get("/", async (req,res) => {
-//     try {
-//         const response = await TaskModel.find({});
-//         res.json(response);
-
-//     } catch (error) {
-//         console.log(error);
-//     }
-// });
-
 router.get("/getSpecTask/:taskID", async (req,res) => {
     const taskID = req.params.taskID;
 
